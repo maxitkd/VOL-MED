@@ -1,10 +1,12 @@
 package med.voll.api.controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
+@SecurityRequirement(name = "bearer-key")
 public class CorsConfiguration implements WebMvcConfigurer {
 
     @Override
